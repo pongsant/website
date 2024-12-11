@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center; /* Centers content horizontally */
+            align-items: center;   /* Centers content vertically */
+            min-height: 100vh;     /* Ensures the content takes up the full height of the viewport */
+            flex-direction: column; /* Stacks items vertically */
+            text-align: center;    /* Centers text inside each element */
+        }
+
+        /* Header */
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Menu */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin-bottom: 30px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #3498db;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #1d5e8a;
+        }
+
+        /* Centered Image */
+        .center-img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px; /* Optional: Add rounded corners */
+        }
+
+        /* Project Description */
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            font-size: 1em;
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>My Portfolio</h1>
+    <p>Welcome to my portfolio website! Click on a project to see examples of my work.</p>
+    <img src="IMG_5028.JPG" alt="A photo of Pongsant" class="center-img">
+
+    <nav>
+        <ul>
+            <li><a href="project1.html">Project 1</a></li>
+            <li><a href="project2.html">Project 2</a></li>
+            <li><a href="project3.html">Project 3</a></li>
+            <li><a href="project4.html">Project 4</a></li>
+            <li><a href="project5.html">Project 5</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <p>© 2024 Pongsant</p>
+    </footer>
+</body>
+</html>
