@@ -1,117 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Website</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Body */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center; /* Centers content horizontally */
-            align-items: center;   /* Centers content vertically */
-            min-height: 100vh;     /* Ensures the content takes up the full height of the viewport */
-            flex-direction: column; /* Stacks items vertically */
-            text-align: center;    /* Centers text inside each element */
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+    background-color: #f7f9fc;
+    color: #333;
+    overflow-x: hidden;
+}
 
-        /* Header */
-        h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        }
+/* Motion Graphic Background */
+.motion-graphic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle, #F5DF4D 0%, #0F4C81 50%, #E94B35 100%);
+    background-size: 300% 300%;
+    animation: backgroundMotion 15s infinite alternate;
+}
 
-        /* Navigation Menu */
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style-type: none;
-            margin-bottom: 30px;
-        }
+@keyframes backgroundMotion {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
 
-        nav ul li {
-            margin: 0 20px;
-        }
+/* Header Styling */
+header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            font-size: 1.2em;
-            color: #3498db;
-            transition: color 0.3s ease;
-        }
+header .logo {
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 1.5px;
+}
 
-        nav ul li a:hover {
-            color: #1d5e8a;
-        }
+header .group {
+    display: flex;
+    align-items: center;
+}
 
-        /* Centered Image */
-        .center-img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-            border-radius: 10px; /* Optional: Add rounded corners */
-        }
+.navigation {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-        /* Project Description */
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
+.navigation li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s, transform 0.3s;
+}
 
-        /* Footer */
-        footer {
-            font-size: 1em;
-            color: #7f8c8d;
-            margin-top: 20px;
-        }
+.navigation li a:hover {
+    color: #636eff;
+    transform: translateY(-2px);
+}
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-            }
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 249, 252, 1));
+}
 
-            h1 {
-                font-size: 2em;
-            }
+.hero h1 {
+    font-size: 60px;
+    color: #333;
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 20px;
+}
 
-            p {
-                font-size: 1em;
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1>My Portfolio</h1>
-    <p>Welcome to my portfolio website! Click on a project to see examples of my work.</p>
-    <img src="IMG_5028.JPG" alt="A photo of Pongsant" class="center-img">
+.hero p {
+    font-size: 20px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
 
-    <nav>
-        <ul>
-            <li><a href="project1.html">Project 1</a></li>
-            <li><a href="project2.html">Project 2</a></li>
-            <li><a href="project3.html">Project 3</a></li>
-            <li><a href="project4.html">Project 4</a></li>
-            <li><a href="project5.html">Project 5</a></li>
-        </ul>
-    </nav>
-    <footer>
-        <p>© 2024 Pongsant</p>
-    </footer>
-</body>
-</html>
+/* Button Styling */
+button {
+    padding: 12px 24px;
+    background-color: #636eff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #5555ff;
+    transform: translateY(-3px);
+}
+
+/* Navigation */
+nav {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #636eff;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 220px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .navigation li {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .menuToggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+}

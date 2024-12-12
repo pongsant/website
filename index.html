@@ -6,9 +6,100 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../responsive-navigation-menu copy/css/style.css">
-</head>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            overflow: hidden;
+        }
 
+        /* Motion Graphic Background */
+        .motion-graphic {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle, #F5DF4D 0%, #0F4C81 50%, #E94B35 100%);
+            background-size: 300% 300%;
+            animation: backgroundMotion 15s infinite alternate;
+        }
+
+        @keyframes backgroundMotion {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 50% 50%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Centering the Heading */
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
+            color: #333;
+        }
+
+        .center-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .center-content p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        /* Project Links */
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ebebeb;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+            text-align: center;
+        }
+
+        .project-links a:hover {
+            background-color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        /* Navigation Styles */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
 <body>
+    <!-- Motion Graphic Background -->
+    <div class="motion-graphic"></div>
+
+    <!-- Header -->
     <header>
         <a href="#" class="logo">Pongsant</a>
         <div class="group">
@@ -29,22 +120,23 @@
           <input type="text" placeholder="Search here...">
         </div>
       </header>
-    <h1>My Portfolio</h1>
-    <p>Explore my creative projects in p5.js. Click on a project to learn more!</p>
+
+    <!-- Main Content -->
+    <div class="center-content">
+        <h1>My Portfolio</h1>
+        <p>Explore my creative projects in p5.js. Click on a project to learn more!</p>
+
+        <!-- Project Links -->
+        <div class="project-links">
+            <a href="project1.html">Project 1</a>
+            <a href="project2.html">Project 2</a>
+            <a href="project3.html">Project 3</a>
+            <a href="project4.html">Project 4</a>
+            <a href="project5.html">Project 5</a>
+            <a href="project6.html">Project 6</a>
+        </div>
+    </div>
     
-    <nav>
-        <ul>
-            <li><a href="project1.html">Project 1</a></li>
-            <li><a href="project2.html">Project 2</a></li>
-            <li><a href="project3.html">Project 3</a></li>
-            <li><a href="project4.html">Project 4</a></li>
-            <li><a href="project5.html">Project 5</a></li>
-            <li><a href="project6.html">Project 6</a></li>
-    </nav>
-    
-    <footer>
-        <p>© 2024 Pongsant</p>
-    </footer>
     <script src="../responsive-navigation-menu copy/js/script.js"></script>
-    </body>
+</body>
 </html>
