@@ -6,6 +6,15 @@ let win = false;
 let gameStart = false; // New variable for game start
 let backgroundImage, playerImage, rockImage, bg1, bg2, bg3;
 
+function preload() {
+  bg1 = loadImage('background.jpg');
+  bg2 = loadImage('p6bg2.jpg');
+  bg3 = loadImage('p6bg3.jpg');
+  playerImage = loadImage('p6p1.png');
+  rockImage = loadImage('rock.png');
+}
+ 
+
 function setup() {
   createCanvas(600, 600);
   P1 = new Player(); // Instantiate the Player class
@@ -179,11 +188,3 @@ function displayWin() {
   text("Score: " + score, width / 2, height / 2 + 40);
 }
 
-function preload() {
-  bg1 = loadImage("background.jpg");
-  bg2 = loadImage("bg2.jpg");
-  bg3 = loadImage("bg3.jpg");
-  playerImage = loadImage("p1.png");
-  rockImage = loadImage("rock.png");
-}
- 
