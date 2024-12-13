@@ -6,11 +6,16 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
     line-height: 1.8;
-    background-color: #f7f9fc;
-    color: #333;
+    background-color: #ffffff; /* White background for better readability */
+    color: #111; /* Darker text color for contrast */
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 /* Motion Graphic Background */
@@ -21,7 +26,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(circle, #F5DF4D 0%, #0F4C81 50%, #E94B35 100%);
+    background: radial-gradient(circle, #ebebeb 10%, #ddebf7 50%, #fffefc 100%);
     background-size: 300% 300%;
     animation: backgroundMotion 15s infinite alternate;
 }
@@ -42,18 +47,24 @@ body {
 h1 {
     text-align: center;
     font-size: 48px;
-    color: #333;
-    font-family: 'DM Serif Display', serif;
+    color: #000; /* Bold black for clear visibility */
+    font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
     margin: 40px 0 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for better readability */
 }
 
 p {
     text-align: center;
     font-size: 20px;
-    color: #555;
+    color: #333; /* Neutral text color */
+    font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
     max-width: 800px;
     margin: 0 auto 20px;
-    line-height: 1.6;
+    line-height: 1.8; /* Increased line spacing for clarity */
+    
+    padding: 10px 20px; /* Padding around text */
+    border-radius: 8px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 /* Button Styling */
@@ -61,28 +72,21 @@ button {
     display: block;
     margin: 20px auto;
     padding: 12px 24px;
-    background-color: #636eff;
-    color: white;
+    background-color: #000; /* Black button */
+    color: #fff; /* White text for contrast */
     font-size: 16px;
+    font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for button text */
 }
 
 button:hover {
-    background-color: #5555ff;
+    background-color: #333; /* Slightly lighter black for hover effect */
     transform: translateY(-3px);
-}
-
-/* Footer Styling */
-footer {
-    background: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 40px;
+    color: #e0e0e0; /* Softer white for hover */
 }
 
 /* Centering .sketch1 */
@@ -90,4 +94,9 @@ footer {
     position: relative;
     width: 400px; /* Ensure the element has a defined width */
     margin: 0 auto; /* Center horizontally */
+    background: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    border: 2px solid #000; /* Border for definition */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 10px; /* Add padding for content */
 }

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Work</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../responsive-navigation-menu copy/css/style.css">
     <style>
         /* General Styles */
         body {
             margin: 0;
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
             line-height: 1.6;
             overflow: hidden;
         }
@@ -23,7 +23,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: radial-gradient(circle, #F5DF4D 0%, #0F4C81 50%, #E94B35 100%);
+            background: radial-gradient(circle, #ebebeb 10%, #83c1f7 50%, #f3dfc7 100%);
             background-size: 300% 300%;
             animation: backgroundMotion 15s infinite alternate;
         }
@@ -53,11 +53,13 @@
 
         .center-content h1 {
             font-size: 48px;
+            font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
             margin-bottom: 20px;
         }
 
         .center-content p {
             font-size: 18px;
+            font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
             max-width: 600px;
             margin: 0 auto 40px;
             line-height: 1.6;
@@ -78,6 +80,7 @@
             color: rgb(0, 0, 0);
             text-decoration: none;
             font-size: 16px;
+            font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
             border-radius: 5px;
             transition: background 0.3s, transform 0.3s;
             text-align: center;
@@ -101,13 +104,11 @@
 
     <!-- Header -->
     <header>
-        <a href="#" class="logo">Pongsant</a>
+        <a href="#" class="logo" style="font-family: 'Times New Roman', serif;">Pongsant</a> <!-- Changed font -->
         <div class="group">
-          <ul class="navigation">
+          <ul class="navigation" style="font-family: 'Times New Roman', serif;"> <!-- Changed font -->
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blog</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
           <div class="search">
@@ -117,13 +118,13 @@
           <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
         </div>
         <div class="searchBox">
-          <input type="text" placeholder="Search here...">
+          <input type="text" placeholder="Search here..." style="font-family: 'Times New Roman', serif;"> <!-- Changed font -->
         </div>
       </header>
 
     <!-- Main Content -->
     <div class="center-content">
-        <h1>My Portfolio</h1>
+        <h1>My Work</h1>
         <p>Explore my creative projects in p5.js. Click on a project to learn more!</p>
 
         <!-- Project Links -->
