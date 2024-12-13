@@ -10,7 +10,7 @@
         /* General Styles */
         body {
             margin: 0;
-            font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
+            font-family: 'Times New Roman', serif;
             line-height: 1.6;
             overflow: hidden;
         }
@@ -25,7 +25,7 @@
             z-index: -1;
             background: radial-gradient(circle, #ebebeb 10%, #83c1f7 50%, #f3dfc7 100%);
             background-size: 300% 300%;
-            animation: backgroundMotion 15s infinite alternate;
+            animation: backgroundMotion 10s infinite alternate;
         }
 
         @keyframes backgroundMotion {
@@ -46,20 +46,20 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full viewport height */
+            height: 100vh;
             text-align: center;
             color: #333;
         }
 
         .center-content h1 {
             font-size: 48px;
-            font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
+            font-family: 'Times New Roman', serif;
             margin-bottom: 20px;
         }
 
         .center-content p {
             font-size: 18px;
-            font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
+            font-family: 'Times New Roman', serif;
             max-width: 600px;
             margin: 0 auto 40px;
             line-height: 1.6;
@@ -80,7 +80,7 @@
             color: rgb(0, 0, 0);
             text-decoration: none;
             font-size: 16px;
-            font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
+            font-family: 'Times New Roman', serif;
             border-radius: 5px;
             transition: background 0.3s, transform 0.3s;
             text-align: center;
@@ -96,6 +96,13 @@
             text-align: center;
             margin-top: 20px;
         }
+
+        .searchBox input {
+            width: 150px;
+            padding: 4px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -104,12 +111,12 @@
 
     <!-- Header -->
     <header>
-        <a href="#" class="logo" style="font-family: 'Times New Roman', serif;">Pongsant</a> <!-- Changed font -->
+        <a href="#" class="logo" style="font-family: 'Times New Roman', serif;">Pongsant</a>
         <div class="group">
-          <ul class="navigation" style="font-family: 'Times New Roman', serif;"> <!-- Changed font -->
+          <ul class="navigation" style="font-family: 'Times New Roman', serif;">
             <li><a href="#">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="Contact.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
           </ul>
           <div class="search">
             <span class="icon"><ion-icon name="search-outline" class="searchBtn"></ion-icon></span>
@@ -118,9 +125,10 @@
           <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
         </div>
         <div class="searchBox">
-          <input type="text" placeholder="Search here..." style="font-family: 'Times New Roman', serif;"> <!-- Changed font -->
+          <input id="search-input" type="text" placeholder="Search here..." style="font-family: 'Times New Roman', serif;">
+          <button onclick="performSearch()">Search</button>
         </div>
-      </header>
+    </header>
 
     <!-- Main Content -->
     <div class="center-content">
@@ -138,6 +146,26 @@
         </div>
     </div>
     
-    <script src="../responsive-navigation-menu copy/js/script.js"></script>
+    <script>
+        function performSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            const pages = {
+                'project 1': 'project1.html',
+                'project 2': 'project2.html',
+                'project 3': 'project3.html',
+                'project 4': 'project4.html',
+                'project 5': 'project5.html',
+                'project 6': 'project6.html',
+                'about': 'about.html',
+                'contact': 'Contact.html'
+            };
+
+            if (pages[query]) {
+                window.location.href = pages[query];
+            } else {
+                alert('No matching page found. Please try again!');
+            }
+        }
+    </script>
 </body>
 </html>
