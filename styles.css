@@ -44,6 +44,19 @@ nav ul li a:hover {
     opacity: 0.6;
 }
 
+/* "My Works" in Navigation */
+.my-works-nav {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    transition: opacity 0.3s;
+}
+
+.my-works-nav:hover {
+    opacity: 0.6;
+}
+
 /* Designer-style Name Placement */
 .name {
     font-size: 14px;
@@ -70,7 +83,7 @@ main {
     margin-bottom: 40px;
 }
 
-/* Work Page - Grid Layout */
+/* Work Page */
 .work-container {
     display: flex;
     flex-direction: column;
@@ -85,41 +98,27 @@ main {
     margin-bottom: 40px;
 }
 
-/* Grid layout for work */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    width: 100%;
-}
-
-.project-item {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
+/* Simple Project List */
+.project-links {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    transition: transform 0.3s ease-in-out, opacity 0.3s;
+    gap: 20px;
 }
 
-.project-item img {
-    width: 100%;
-    height: auto;
-    max-width: 320px;
-    object-fit: cover;
-    border-radius: 10px;
+.project-links a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: opacity 0.3s;
 }
 
-.project-item:hover {
-    transform: scale(1.05);
-    opacity: 0.8;
+.project-links a:hover {
+    opacity: 0.6;
 }
 
-/* Work 2024 Page (Old Version but Improved) */
+/* Work 2024 Page */
 .work-2024-container {
     display: flex;
     flex-direction: column;
@@ -224,10 +223,6 @@ main {
     .work-container {
         padding: 120px 40px;
     }
-
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media (max-width: 768px) {
@@ -237,10 +232,6 @@ main {
 
     .work-container {
         padding: 100px 30px;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
     }
 
     .about-image, .contact-image {
@@ -255,9 +246,5 @@ main {
 
     .work-container {
         padding: 100px 20px;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
     }
 }
