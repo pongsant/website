@@ -3,169 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Work</title>
+    <title>Portfolio | Pongsant Chintanapakdee</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../responsive-navigation-menu copy/css/style.css">
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: 'Times New Roman', serif;
-            line-height: 1.6;
-            overflow: hidden;
-        }
-
-        /* Motion Graphic Background */
-        .motion-graphic {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: radial-gradient(circle, #ebebeb 10%, #83c1f7 50%, #f3dfc7 100%);
-            background-size: 300% 300%;
-            animation: backgroundMotion 10s infinite alternate;
-        }
-
-        @keyframes backgroundMotion {
-            0% {
-                background-position: 0% 0%;
-            }
-            50% {
-                background-position: 50% 50%;
-            }
-            100% {
-                background-position: 100% 100%;
-            }
-        }
-
-        /* Centering the Heading */
-        .center-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            color: #333;
-        }
-
-        .center-content h1 {
-            font-size: 48px;
-            font-family: 'Times New Roman', serif;
-            margin-bottom: 20px;
-        }
-
-        .center-content p {
-            font-size: 18px;
-            font-family: 'Times New Roman', serif;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-        }
-
-        /* Project Links */
-        .project-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #ebebeb;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            font-size: 16px;
-            font-family: 'Times New Roman', serif;
-            border-radius: 5px;
-            transition: background 0.3s, transform 0.3s;
-            text-align: center;
-        }
-
-        .project-links a:hover {
-            background-color: #ffffff;
-            transform: translateY(-3px);
-        }
-
-        /* Navigation Styles */
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .searchBox input {
-            width: 150px;
-            padding: 4px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
-    <!-- Motion Graphic Background -->
-    <div class="motion-graphic"></div>
 
-    <!-- Header -->
+    <!-- Navigation -->
     <header>
-        <a href="#" class="logo" style="font-family: 'Times New Roman', serif;">Pongsant</a>
-        <div class="group">
-          <ul class="navigation" style="font-family: 'Times New Roman', serif;">
-            <li><a href="#">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-          </ul>
-          <div class="search">
-            <span class="icon"><ion-icon name="search-outline" class="searchBtn"></ion-icon></span>
-            <span class="icon"><ion-icon name="close-outline" class="closeBtn"></ion-icon></span>
-          </div>
-          <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
-        </div>
-        <div class="searchBox">
-          <input id="search-input" type="text" placeholder="Search here..." style="font-family: 'Times New Roman', serif;">
-          <button onclick="performSearch()">Search</button>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h2 class="name">Pongsant Chintanapakdee</h2>
     </header>
 
-    <!-- Main Content -->
-    <div class="center-content">
-        <h1>My Work</h1>
-        <p>Explore my creative projects in p5.js. Click on a project to learn more!</p>
+    <!-- Portfolio Title -->
+    <main>
+        <h1 class="portfolio-title">PORT<br>FOLIO</h1>
+        <a href="#works" class="scroll-down">My Works</a>
+    </main>
 
-        <!-- Project Links -->
-        <div class="project-links">
-            <a href="project1.html">Project 1</a>
-            <a href="project2.html">Project 2</a>
-            <a href="project3.html">Project 3</a>
-            <a href="project4.html">Project 4</a>
-            <a href="project5.html">Project 5</a>
-            <a href="project6.html">Project 6</a>
+    <!-- My Works Section -->
+    <section id="works">
+        <h2>My Works</h2>
+        <div class="project-gallery">
+            <a href="projects/project1.html"><img src="assets/images/project1.png" alt="Project 1"></a>
+            <a href="projects/project2.html"><img src="assets/images/project2.png" alt="Project 2"></a>
+            <a href="projects/project3.html"><img src="assets/images/project3.png" alt="Project 3"></a>
+            <a href="projects/project4.html"><img src="assets/images/project4.png" alt="Project 4"></a>
+            <a href="projects/project5.html"><img src="assets/images/project5.png" alt="Project 5"></a>
+            <a href="projects/project6.html"><img src="assets/images/project6.png" alt="Project 6"></a>
         </div>
-    </div>
-    
-    <script>
-        function performSearch() {
-            const query = document.getElementById('search-input').value.toLowerCase().trim();
-            const pages = {
-                'project 1': 'project1.html',
-                'project 2': 'project2.html',
-                'project 3': 'project3.html',
-                'project 4': 'project4.html',
-                'project 5': 'project5.html',
-                'project 6': 'project6.html',
-                'about': 'about.html',
-                'contact': 'Contact.html'
-            };
+    </section>
 
-            if (pages[query]) {
-                window.location.href = pages[query];
-            } else {
-                alert('No matching page found. Please try again!');
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

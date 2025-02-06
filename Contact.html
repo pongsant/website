@@ -3,101 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact | Pongsant</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Times New Roman', serif;
-            line-height: 1.6;
-            background: radial-gradient(circle, #f3dfc7, #83c1f7, #ebebeb);
-        }
-        .contact-content {
-            text-align: center;
-            padding: 50px;
-        }
-        .contact-content h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        .contact-content p {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto 20px;
-        }
-        .contact-info {
-            margin: 30px auto;
-            text-align: center;
-        }
-        .contact-info p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .contact-content form {
-            max-width: 400px;
-            margin: 20px auto;
-            text-align: left;
-        }
-        .contact-content label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .contact-content input,
-        .contact-content textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .contact-content button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #83c1f7;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .contact-content button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 <body>
+
+    <!-- Navigation -->
     <header>
-        <a href="index.html" class="logo" style="font-family: 'Times New Roman', serif;">Pongsant</a>
         <nav>
-            <ul style="font-family: 'Times New Roman', serif;">
+            <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div class="contact-content">
-        <h1>Contact Me</h1>
-        <p>If you would like to get in touch, you can reach me via email or phone, or fill out the form below:</p>
 
+    <main class="contact-container">
         <div class="contact-info">
             <p>Email: <a href="mailto:chinp966@newschool.edu">chinp966@newschool.edu</a></p>
             <p>Phone: <a href="tel:424-5xx-xxxx">424-5xx-xxxx</a></p>
         </div>
 
-        <form action="submit-form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+        <img src="assets/images/contact-photo.jpg" alt="Pongsant in nature" class="contact-image">
+
+        <h1 class="contact-title">Contact</h1>
+    </main>
+
 </body>
 </html>

@@ -3,57 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About | Pongsant</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Times New Roman', serif;
-            line-height: 1.6;
-            background: radial-gradient(circle, #f3dfc7, #83c1f7, #ebebeb);
-        }
-        .about-content {
-            text-align: center;
-            padding: 50px;
-        }
-        .about-content h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        .about-content p {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto 20px;
-        }
-        .about-content img {
-            max-width: 300px; /* Adjust size */
-            height: auto;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo" style="font-family: 'Times New Roman', serif;">Pongsant</a>
-        <nav>
-            <ul style="font-family: 'Times New Roman', serif;">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="Contact.html">Contact</a></li>
 
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div class="about-content">
-        <h1>About Me</h1>
-        <p>
-            Hi, I'm Pongsant Chintanapakdee, a 21-year-old student at Parsons School of Design in New York City. 
-            I specialize in Design and Technology, blending artistic creativity with technical innovation. 
-            My work explores the intersections of culture, technology, and personal expression. 
-            I aim to create impactful designs that inspire and connect with people worldwide.
-        </p>
-        <img src="images/about-photo.JPG" alt="Pongsant">
-    </div>
+
+    <main class="about-container">
+        <h1 class="about-title">About</h1>
+
+        <img src="assets/images/about-photo.jpg" alt="Pongsant" class="about-image">
+
+        <div class="about-text">
+            <h2>Pongsant Chintanapakdee</h2>
+            <p>Hi, I'm Pongsant Chintanapakdee, a 21-year-old student at Parsons School of Design in New York City.</p>
+            <p>I specialize in Design and Technology, blending artistic creativity with technical innovation.</p>
+            <p>My work explores the intersections of culture, technology, and personal expression. I aim to create impactful designs that inspire and connect with people worldwide.</p>
+        </div>
+    </main>
+
 </body>
 </html>
