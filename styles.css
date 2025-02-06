@@ -5,13 +5,11 @@
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: white;
-    color: black;
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
-/* Navigation */
 header {
     display: flex;
     justify-content: space-between;
@@ -21,69 +19,47 @@ header {
 
 nav ul {
     list-style: none;
-    display: flex;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .name {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
+    text-align: right;
 }
 
-/* Portfolio Title */
 .portfolio-title {
-    font-size: 12vw;
-    font-weight: bold;
-    text-align: left;
-    margin: 50px;
-    line-height: 1;
+    font-size: 180px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 100px 20px;
+    line-height: 140px;
 }
 
-/* Project Links */
-.project-links {
-    position: absolute;
-    top: 30%;
-    right: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.work-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 
-.project-links a {
-    display: block;
-    padding: 10px 20px;
-    border: 2px solid black;
-    border-radius: 20px;
-    text-align: center;
+.work-link a {
+    font-size: 20px;
+    font-weight: 700;
     text-decoration: none;
     color: black;
-    font-size: 20px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.project-links a:hover {
-    background-color: black;
-    color: white;
-}
-
-/* My Works Link */
-.work-link {
-    font-size: 2rem;
-    font-weight: bold;
-    position: absolute;
-    bottom: 20px;
-    left: 50px;
 }
 
 /* Large About Title */
