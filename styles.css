@@ -54,10 +54,9 @@ nav ul li a:hover {
 }
 
 .my-works-nav:hover {
-    opacity: 0.6;
+    opacity: 1.0;
 }
 
-/* Designer-style Name Placement */
 .name {
     font-size: 14px;
     font-weight: bold;
