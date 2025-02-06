@@ -6,41 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
-    <title>Project 6</title>
+    <title>Project 6 | Pongsant</title>
     <link rel="stylesheet" href="p6styles.css">
 </head>
 <body>
-    <!-- Motion Graphic Background -->
-    <div class="motion-graphic"></div>
-    <h1>Project 6</h1>
 
-    <!-- Main Content -->
-    <div class="content-wrapper">
-        <!-- Game Project Description -->
-        <p>
-            Game Project: "Jump and Dodge Adventure"
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            Overview: "Jump and Dodge Adventure" is a 2D game designed to challenge players' reflexes and timing skills. The main goal of the game is to control a player character who must jump over obstacles while progressing through a dynamic background that changes as the player earns points. Players aim to reach a score of 30 to win while avoiding collisions with incoming obstacles.
-            
-            Inspiration: This game was inspired by the classic Google Dinosaur Game, which appears on your screen when there is no internet connection. The simplicity and addictive nature of that game inspired me to create my own version, adding new visual and gameplay elements to make the experience unique and memorable.
-            
-            Gameplay Mechanics:
-            - Player Character: The player controls a character named P1. The character can jump to avoid obstacles using the space bar.
-            - Obstacles: Rocks appear periodically and move across the screen from right to left. The player must jump over these obstacles to avoid collisions. If a collision occurs, the game ends.
-            - Score System: Players earn points when obstacles move off-screen without hitting the player.
+    <!-- Clickable Home Arrow -->
+    <a href="../index.html" class="home-button">←</a>
 
-            Objective: Survive as long as possible by avoiding obstacles and aiming for a high score. A score of 30 points will result in a win, while a collision with any obstacle will lead to a game over.
-            
-            Development Details: The game is developed using p5.js, leveraging its capabilities to handle graphics, images, and simple physics for the character's movement.
-        </p>
+    <!-- Project Number -->
+    <h1 class="project-number">06</h1>
 
-        
+    <!-- Sketch and Description Layout -->
+    <div class="project-container">
+        <!-- Left: Project Description -->
+        <div class="project-description">
+            <p>
+                <strong>Game Project:</strong> <em>Jump and Dodge Adventure</em>
+            </p>
+
+            <p>
+                <strong>Overview:</strong> <em>Jump and Dodge Adventure</em> is a **2D game** designed to test players' **reflexes** and **timing skills**. 
+                The player controls a character that must **jump over obstacles** while the background dynamically changes as points are earned. 
+                The goal is to **reach a score of 30 to win** while avoiding collisions with incoming obstacles.
+            </p>
+
+            <p>
+                <strong>Inspiration:</strong> This game was inspired by the **Google Dinosaur Game**, which appears when there is no internet connection. 
+                Its simplicity and addictiveness motivated me to **create my own version**, adding unique visual and gameplay elements.
+            </p>
+
+            <p><strong>Gameplay Mechanics:</strong></p>
+            <ul>
+                <li><strong>Player Character:</strong> The player controls P1, who can jump using the space bar.</li>
+                <li><strong>Obstacles:</strong> Rocks move from right to left. The player must jump over them to avoid collisions.</li>
+                <li><strong>Score System:</strong> Players earn points when obstacles **move off-screen without hitting them.</li>
+                <li><strong>Objective:</strong> Avoid obstacles and aim for a high score. Reaching 30 points = WIN, but colliding = GAME OVER.</li>
+            </ul>
+
+            <p>
+                <strong>Development Details:</strong> The game is built in **p5.js**, utilizing **graphics, images, and simple physics** for smooth movement and interaction.
+            </p>
+        </div>
+
+        <!-- Right: Sketch Container for p5.js -->
+        <div id="sketch-container" class="sketch-container"></div>
     </div>
 
-    <!-- Back to Home Button -->
-    <button onclick="window.location.href='index.html'">Back to Home Page</button>
-
-    <!-- Include External Script -->
+    <!-- Attach p5.js Sketch -->
     <script src="P6sketch.js"></script>
+
 </body>
 </html>
