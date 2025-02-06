@@ -14,13 +14,14 @@ body {
 /* Navigation */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 20px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    padding-right: 20px;
 }
 
 nav ul li {
@@ -33,26 +34,27 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Back Button */
-.back-button {
+/* Home Button Arrow */
+.home-button {
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 40px;
+    font-size: 50px;
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
-.back-button:hover {
+.home-button:hover {
     opacity: 0.7;
 }
 
-/* Project Number */
+/* Large Project Number */
 .project-number {
     font-size: 12vw;
     font-weight: bold;
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 5%;
 }
 
@@ -61,32 +63,25 @@ nav ul li a {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 80px 50px;
-}
-
-/* Sketch Section */
-.sketch-container {
-    width: 400px;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
+    padding: 100px 50px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* Project Description */
 .project-description {
-    max-width: 500px;
+    max-width: 40%;
     text-align: left;
-}
-
-.project-description h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.project-description p {
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 15px;
+}
+
+/* Sketch Section */
+.sketch-container {
+    width: 55%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray; /* Placeholder background */
 }
