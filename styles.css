@@ -41,6 +41,7 @@ nav ul li a {
     text-align: right;
 }
 
+/* Portfolio Title */
 .portfolio-title {
     font-size: 180px;
     font-weight: 700;
@@ -49,6 +50,75 @@ nav ul li a {
     line-height: 140px;
 }
 
+/* Work Page */
+.work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.work-title {
+    font-size: 10vw;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-links a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: opacity 0.3s;
+}
+
+.project-links a:hover {
+    opacity: 0.6;
+}
+
+/* Work 2024 Page */
+.work-2024-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.work-2024-title {
+    font-size: 10vw;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.work-2024-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.work-2024-links a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: opacity 0.3s;
+}
+
+.work-2024-links a:hover {
+    opacity: 0.6;
+}
+
+/* Work Link at Bottom */
 .work-link {
     position: fixed;
     bottom: 20px;
@@ -62,7 +132,7 @@ nav ul li a {
     color: black;
 }
 
-/* Large About Title */
+/* About Page */
 .about-title {
     font-size: 10vw;
     font-weight: bold;
@@ -71,7 +141,6 @@ nav ul li a {
     line-height: 1;
 }
 
-/* About Section */
 .about-container {
     display: flex;
     flex-direction: column;
@@ -86,36 +155,18 @@ nav ul li a {
     display: block;
 }
 
-/* Contact Page Layout */
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 50px auto;
-    position: relative;
-}
-
-/* "My Works" Top Right */
-.my-works {
-    font-size: 2rem;
-    font-weight: bold;
-    position: absolute;
-    top: 20px;
-    right: 50px;
-}
-
-/* Contact Page Layout */
+/* Contact Page */
 .contact-container {
     display: flex;
     flex-direction: column;
     position: relative;
     width: 90%;
     max-width: 1200px;
-    min-height: 100vh; /* Ensures full screen height */
+    min-height: 100vh;
     margin: 0 auto;
 }
 
-/* "My Works" Top Right */
+/* My Works Top Right */
 .my-works {
     font-size: 2rem;
     font-weight: bold;
@@ -133,16 +184,16 @@ nav ul li a {
     color: gray;
 }
 
-/* Contact Image (Right Side, Even Larger) */
+/* Contact Image (Right Side, Large) */
 .contact-image {
-    width: 65%;  /* Increased to 65% */
+    width: 65%;
     height: auto;
     position: absolute;
-    top: 20%; /* Adjusted for better alignment */
+    top: 20%;
     right: 50px;
 }
 
-/* Large "Contact" Title at Bottom */
+/* Large Contact Title at Bottom */
 .contact-title {
     font-size: 10vw;
     font-weight: bold;
