@@ -5,6 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Works | Pongsant Chintanapakdee</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* My Works Title */
+        .works-title {
+            font-size: 100px;
+            font-weight: bold;
+            text-align: left;
+            margin: 50px;
+        }
+
+        /* Project Gallery */
+        .project-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .project-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        .project-thumbnail {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc; /* Placeholder */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .project-label {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +100,32 @@
     <!-- My Works Title -->
     <h1 class="works-title">My Works</h1>
 
-    <!-- Project Links -->
+    <!-- Project Gallery -->
     <div class="project-gallery">
-        <a href="projects/project1.html" class="project-item">Project 1</a>
-        <a href="projects/project2.html" class="project-item">Project 2</a>
-        <a href="projects/project3.html" class="project-item">Project 3</a>
-        <a href="projects/project4.html" class="project-item">Project 4</a>
-        <a href="projects/project5.html" class="project-item">Project 5</a>
-        <a href="projects/project6.html" class="project-item">Project 6</a>
+        <a href="projects/project1.html" class="project-item">
+            <div class="project-thumbnail">01</div>
+            <div class="project-label">Project 1</div>
+        </a>
+        <a href="projects/project2.html" class="project-item">
+            <div class="project-thumbnail">02</div>
+            <div class="project-label">Project 2</div>
+        </a>
+        <a href="projects/project3.html" class="project-item">
+            <div class="project-thumbnail">03</div>
+            <div class="project-label">Project 3</div>
+        </a>
+        <a href="projects/project4.html" class="project-item">
+            <div class="project-thumbnail">04</div>
+            <div class="project-label">Project 4</div>
+        </a>
+        <a href="projects/project5.html" class="project-item">
+            <div class="project-thumbnail">05</div>
+            <div class="project-label">Project 5</div>
+        </a>
+        <a href="projects/project6.html" class="project-item">
+            <div class="project-thumbnail">06</div>
+            <div class="project-label">Project 6</div>
+        </a>
     </div>
 
 </body>
