@@ -1,30 +1,31 @@
 function setup() {
   createCanvas(400, 400);
+  let canvas = createCanvas(400, 400);
+  canvas.parent("sketch-container"); // Attach canvas to div
 }
 
 function draw() {
   background(150);
   
-  push()
-  translate(width/2, height/2)
-  rotate(PI/2)
-  stroke(0)
-  fill(255)
-  rectMode(CENTER)
+  push();
+  translate(width/2, height/2);
+  rotate(PI/2);
+  stroke(0);
+  fill(255);
+  rectMode(CENTER);
   noStroke();
-  rect(0,0, 255, 25)
-  pop()
+  rect(0, 0, 255, 25);
+  pop();
   
-  push()
-  translate(171, 35)
+  push();
+  translate(171, 35);
   noStroke();
   triangle(16, 37.5, 30, 10, 43, 37.5);
-  pop()
+  pop();
   
-  push()
-  translate(width/2, height/2)
+  push();
+  translate(width/2, height/2);
   noStroke();
-  circle(0,127.5, 25);
-  pop()
-  
+  circle(0, 127.5, 25);
+  pop();
 }

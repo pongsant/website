@@ -2,32 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 | Pongsant</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
-    <title>Project 1</title>
     <link rel="stylesheet" href="p1style.css">
 </head>
 <body>
-    <!-- Motion Graphic Background -->
-    <div class="motion-graphic"></div>
 
-    <!-- Main Content -->
-    <h1>Project 1</h1>
-    <p>This is Project 1, This assignment involves drawing an object described to us in plain language using code. 
-        The goal is to explore how memories and descriptions are interpreted differently when translated into visuals 
-        through programming. My partner described an Apple Pencil, and I took on the challenge of coding its representation in p5.js. 
-        Initially, I struggled with the unfamiliar syntax and concepts, as this was my first time using p5.js. However, after exploring 
-        tutorials and practicing, I managed to create an Apple Pencil using shapes and code. This experience taught me not only the basics 
-        of p5.js but also how to break complex tasks into smaller, manageable steps to bring ideas to life. </p> 
-    <!-- Back to Home Button -->
-    <button onclick="window.location.href='index.html'">Back to Home Page</button>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Sketch Container -->
-    <div id="sketch-container" class="sketch1"></div>
+    <!-- Back Button -->
+    <a href="../work.html" class="back-button">←</a>
 
-    <!-- Include External Script -->
-    <script src="P1sketch.js"></script>
+    <!-- Project Number -->
+    <h1 class="project-number">01</h1>
+
+    <!-- Sketch and Description -->
+    <div class="project-container">
+        <div class="sketch-container">
+            <script src="P1sketch.js"></script>
+        </div>
+
+        <div class="project-description">
+            <h2>Project 1: Apple Pencil in p5.js</h2>
+            <p>This assignment explores how memories and descriptions are interpreted differently when translated into visuals through programming.</p>
+            <p>My partner described an **Apple Pencil**, and I took on the challenge of coding its representation in **p5.js**. This was my first time using p5.js, so I had to break complex tasks into small steps.</p>
+        </div>
+    </div>
+
 </body>
 </html>
