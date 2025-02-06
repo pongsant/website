@@ -1,7 +1,6 @@
 function setup() {
-  createCanvas(400, 400);
   let canvas = createCanvas(400, 400);
-  canvas.parent("sketch-container"); // Attach canvas to div
+  canvas.parent("sketch-container"); // Attach to div
 }
 
 function draw() {

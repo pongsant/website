@@ -47,21 +47,21 @@ nav ul li a {
     opacity: 0.7;
 }
 
+/* Project Number */
+.project-number {
+    font-size: 12vw;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
 /* Project Layout */
 .project-container {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-}
-
-/* Project Number */
-.project-number {
-    font-size: 10vw;
-    font-weight: bold;
-    position: absolute;
-    top: 20px;
-    left: 50px;
+    padding: 80px 50px;
 }
 
 /* Sketch Section */
