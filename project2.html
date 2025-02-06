@@ -6,39 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
-    <title>Project 2</title>
+    <title>Project 2 | Pongsant</title>
     <link rel="stylesheet" href="p2styles.css">
 </head>
 <body>
-    <!-- Motion Graphic Background -->
-    <div class="motion-graphic"></div>
 
-    <!-- Main Content -->
-    <h1>Project 2</h1>
-    <p>Objective: Create a simple generator that makes different versions of the same design.
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        In parameterized design, you guide the process like a conductor leading an orchestra. 
-        Instead of drawing each detail of a single design step by step, you use code to set rules and create many 
-        variations automatically.
-        For Assignment 2, I worked on making a simple generator that changes the look of a face based on how the mouse moves.
-         The size of the eyes, the width of the mouth, and the shape of the face all change as you move the mouse around the canvas. 
-         The face also reacts to the direction and angle of the mouse, making it more fun and interactive.
-        This project helped me understand how parameterized design can make creating variations easier. I also learned how adding interactivity 
-        can make designs more exciting. By playing around with different shapes and using the map() function, I created a design that’s both 
-        responsive and fun to explore.</p> 
+    <!-- Clickable Home Arrow -->
+    <a href="../index.html" class="home-button">←</a>
 
-    <!-- Back to Home Button -->
-    <button onclick="window.location.href='index.html'">Back to Home Page</button>
+    <!-- Project Number -->
+    <h1 class="project-number">02</h1>
 
-    <!-- Sketch Container -->
-    <div id="sketch-container" class="sketch2"></div>
+    <!-- Sketch and Description Layout -->
+    <div class="project-container">
+        <!-- Left: Project Description -->
+        <div class="project-description">
+            <p>
+                <strong>Objective:</strong> Create a simple generator that produces different variations of the same design.
+            </p>
 
-    <!-- Footer -->
-    <footer>
-        <!-- Add footer content if needed -->
-    </footer>
+            <p>
+                In **parameterized design**, you guide the process like a conductor leading an orchestra. Instead of drawing each detail step by step, 
+                you use code to define rules that generate many **unique variations** automatically.
+            </p>
 
-    <!-- Include External Script -->
+            <p>
+                For this assignment, I created a **face generator** that dynamically adjusts features based on mouse movement. The **eye size**, **mouth width**, 
+                and **face shape** change as you move the cursor. The design also reacts to the angle and direction of movement, making the experience more 
+                interactive and engaging.
+            </p>
+
+            <p>
+                This project taught me the power of **parameterized design** and how interactivity enhances engagement. Using the **map()** function, 
+                I built a responsive face design that reacts in real-time, making it both fun and educational.
+            </p>
+        </div>
+
+        <!-- Right: Sketch Container for p5.js -->
+        <div id="sketch-container" class="sketch-container"></div>
+    </div>
+
+    <!-- Attach p5.js Sketch -->
     <script src="P2sketch.js"></script>
+
 </body>
 </html>

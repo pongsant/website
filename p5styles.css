@@ -1,102 +1,94 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("../assets/fonts/HelveticaNeue.ttf") format("truetype");
 }
 
 body {
-    font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
-    line-height: 1.8;
-    background-color: #ffffff; /* White background for better readability */
-    color: #111; /* Darker text color for contrast */
-    overflow-x: hidden;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
 }
 
-/* Motion Graphic Background */
-.motion-graphic {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* Navigation */
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
     width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: radial-gradient(circle, #ebebeb 10%, #ddebf7 50%, #fffefc 100%);
-    background-size: 300% 300%;
-    animation: backgroundMotion 15s infinite alternate;
 }
 
-@keyframes backgroundMotion {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 50% 50%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-right: 20px;
 }
 
-/* Page Content Styling */
-h1 {
-    text-align: center;
-    font-size: 48px;
-    color: #000; /* Bold black for clear visibility */
-    font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
-    margin: 40px 0 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for better readability */
+nav ul li {
+    margin: 0 15px;
 }
 
-p {
-    text-align: center;
-    font-size: 20px;
-    color: #333; /* Neutral text color */
-    font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
-    max-width: 800px;
-    margin: 0 auto 20px;
-    line-height: 1.8; /* Increased line spacing for clarity */
-    
-    padding: 10px 20px; /* Padding around text */
-    border-radius: 8px; /* Rounded corners for modern look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
 }
 
-/* Button Styling */
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 24px;
-    background-color: #000; /* Black button */
-    color: #fff; /* White text for contrast */
-    font-size: 16px;
-    font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
-    border: none;
-    border-radius: 5px;
+/* Home Button Arrow */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s, color 0.3s;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for button text */
 }
 
-button:hover {
-    background-color: #333; /* Slightly lighter black for hover effect */
-    transform: translateY(-3px);
-    color: #e0e0e0; /* Softer white for hover */
+.home-button:hover {
+    opacity: 0.7;
 }
 
-/* Centering .sketch1 */
-.sketch1 {
+/* Project Container - Centering Everything */
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+/* Large Project Number - On Top of Sketch */
+.project-number {
+    font-size: 12vw;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: -50px; /* Pull it closer to the sketch */
+    z-index: 2;
+}
+
+/* Sketch Section - Centered */
+.sketch-container {
+    width: 600px;
+    height: 600px; /* Adjusted to match sketch size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    width: 400px; /* Ensure the element has a defined width */
-    margin: 0 auto; /* Center horizontally */
-    background: rgba(255, 255, 255, 0.8); /* Light background for contrast */
-    border: 2px solid #000; /* Border for definition */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 10px; /* Add padding for content */
+}
+
+/* Project Description - Below Sketch */
+.project-description {
+    max-width: 600px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
 }

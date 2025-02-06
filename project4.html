@@ -6,42 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
-    <title>Project 4</title>
+    <title>Project 4 | Pongsant</title>
     <link rel="stylesheet" href="p4styles.css">
 </head>
 <body>
-    <!-- Motion Graphic Background -->
-    <div class="motion-graphic"></div>
 
-    <!-- Main Content -->
-    <h1>Project 4</h1>
-    <p>In Project 4, Description:
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        This week’s lecture was about how optical illusions can hide personal information, messages, or locations. For this project, 
-        I made an animated optical illusion using interactive patterns. I was inspired by 
-        the importance of patterns in art and culture to create a moving dot design that reacts to user interaction.
-        
-     My Design:
-        - Pattern: The design is made up of dots in three colors: black, grey, and white.
-        - Interaction: When you click on a dot, it starts moving in a wave-like motion.
-        - Stop Motion: If you click the dot again, it stops moving.
-        - Unique Movement: Each dot moves differently, creating a fun and eye-catching effect.
-        
-        This design shows how optical illusions can make patterns look exciting and puzzling. The interactive part lets the user 
-        control the animation, making it feel more personal and engaging. The way each dot moves differently makes the pattern 
-        look alive and dynamic.</p> 
-    <!-- Back to Home Button -->
-    <button onclick="window.location.href='index.html'">Back to Home Page</button>
+    <!-- Clickable Home Arrow -->
+    <a href="../index.html" class="home-button">←</a>
 
-    <!-- Sketch Container -->
-    <div id="sketch-container" class="sketch4"></div>
+    <!-- Project Number -->
+    <h1 class="project-number">04</h1>
 
-    <!-- Footer -->
-    <footer>
-        <!-- Add footer content if needed -->
-    </footer>
+    <!-- Sketch and Description Layout -->
+    <div class="project-container">
+        <!-- Left: Project Description -->
+        <div class="project-description">
+            <p>
+                <strong>Objective:</strong> Create an animated **optical illusion** that hides information or creates interactive patterns.
+            </p>
 
-    <!-- Include External Script -->
+            <p>
+                This week’s lecture focused on how **optical illusions** can be used to **hide messages, personal details, or locations** 
+                within patterns. Inspired by this, I designed a **moving dot illusion** that reacts to user interaction.
+            </p>
+
+            <p><strong>My Design:</strong></p>
+            <ul>
+                <li><strong>Pattern:</strong> The design consists of dots in three colors: **black, grey, and white**.</li>
+                <li><strong>Interaction:</strong> Clicking on a dot triggers a **wave-like motion**.</li>
+                <li><strong>Stop Motion:</strong> Clicking the dot again **pauses the movement**.</li>
+                <li><strong>Unique Movement:</strong> Each dot follows its **own independent motion**, creating an engaging effect.</li>
+            </ul>
+
+            <p>
+                This project highlights how **optical illusions** can make patterns visually **dynamic and engaging**. By integrating **user interaction**, 
+                I aimed to create a **personalized and immersive** experience. Each dot behaves differently, making the entire composition feel **alive**.
+            </p>
+        </div>
+
+        <!-- Right: Sketch Container for p5.js -->
+        <div id="sketch-container" class="sketch-container"></div>
+    </div>
+
+    <!-- Attach p5.js Sketch -->
     <script src="P4sketch.js"></script>
+
 </body>
 </html>

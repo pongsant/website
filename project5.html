@@ -6,49 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
-    <title>Project 5</title>
+    <title>Project 5 | Pongsant</title>
     <link rel="stylesheet" href="p5styles.css">
 </head>
 <body>
-    <!-- Motion Graphic Background -->
-    <div class="motion-graphic"></div>
 
-    <!-- Main Content -->
-    <h1>Project 5</h1>
-    <p>Objective: Make a data portrait based on one of your personal habits.
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        For Assignment 6, I tracked how often I listen to music and the types of 
-        music I enjoy. Over a week, I collected data on the genres I listened to and how 
-        often I played them. Using this data, I created a self-portrait in p5.js with animation. 
-        In the portrait, each color represents a music genre, and the size of the shapes shows how much I listened to that genre.
-        
-     Process:
-        1. Habit Tracked: I tracked how many times I listened to different types of music (like pop, rock, or classical) for a few days.
-        2. Data Collection: Each time I listened to music, I wrote down the genre and how often I played it, creating a numbered list.
-        3. Visualization: I turned this data into an animated portrait using p5.js:
-           - Colors: Each color stands for a different music genre (e.g., blue for pop, red for rock, green for classical).
-           - Size: Bigger shapes mean I listened to that genre more often.
-           - Animation: The shapes move or pulse, showing the rhythm and energy of my music habits.
-        
-        How to Read the Data Portrait:
-        - The colors show the type of music I listened to.
-        - The size of the shapes shows how much I listened to that genre.
-        - The animation represents the feeling and rhythm of the music.
-        
-        This project helped me turn my music-listening habits into a fun and creative artwork.</p> 
+    <!-- Clickable Home Arrow -->
+    <a href="../index.html" class="home-button">←</a>
 
-    <!-- Back to Home Button -->
-    <button onclick="window.location.href='index.html'">Back to Home Page</button>
+    <!-- Project Number -->
+    <h1 class="project-number">05</h1>
 
-    <!-- Sketch Container -->
-    <div id="sketch-container" class="sketch5"></div>
+    <!-- Sketch and Description Layout -->
+    <div class="project-container">
+        <!-- Left: Project Description -->
+        <div class="project-description">
+            <p>
+                <strong>Objective:</strong> Create a **data portrait** based on a personal habit.
+            </p>
 
-    <!-- Footer -->
-    <footer>
-        <!-- Add footer content if needed -->
-    </footer>
+            <p>
+                For this assignment, I tracked how often I listen to music and what types of music I enjoy. 
+                Over a week, I collected data on the **genres I listened to** and **how frequently** I played them.
+            </p>
 
-    <!-- Include External Script -->
+            <p><strong>Process:</strong></p>
+            <ul>
+                <li><strong>Habit Tracked:</strong> I recorded how many times I listened to different **music genres** (e.g., pop, rock, classical).</li>
+                <li><strong>Data Collection:</strong> Each time I listened to music, I wrote down the **genre and frequency**.</li>
+                <li><strong>Visualization:</strong> I transformed this data into an **animated self-portrait using p5.js**:</li>
+                <ul>
+                    <li><strong>Colors:</strong> Each genre is represented by a different **color** (e.g., blue for pop, red for rock, green for classical).</li>
+                    <li><strong>Size:</strong> The **larger** the shape, the more I listened to that genre.</li>
+                    <li><strong>Animation:</strong> Shapes **move or pulse** to represent the **rhythm and energy** of my music habits.</li>
+                </ul>
+            </ul>
+
+            <p>
+                <strong>How to Read the Data Portrait:</strong><br>
+                - Colors represent different **music genres**.<br>
+                - Shape **size** shows how frequently I listened to each genre.<br>
+                - **Animation** adds movement to reflect the music’s rhythm.
+            </p>
+
+            <p>
+                This project helped me **turn my music-listening habits into an interactive and artistic experience**.
+            </p>
+        </div>
+
+        <!-- Right: Sketch Container for p5.js -->
+        <div id="sketch-container" class="sketch-container"></div>
+    </div>
+
+    <!-- Attach p5.js Sketch -->
     <script src="P5sketch.js"></script>
+
 </body>
 </html>
