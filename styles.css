@@ -8,24 +8,28 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
+    color: black;
 }
 
+/* Navigation Bar */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    top: 0;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    gap: 25px;
     padding: 0;
     margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
 }
 
 nav ul li a {
@@ -33,81 +37,112 @@ nav ul li a {
     color: black;
     font-size: 14px;
     font-weight: 400;
+    transition: opacity 0.3s;
 }
 
+nav ul li a:hover {
+    opacity: 0.6;
+}
+
+/* Designer-style Name Placement */
 .name {
     font-size: 14px;
     font-weight: bold;
     text-align: right;
 }
 
-/* Portfolio Title */
-.portfolio-title {
-    font-size: 180px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 100px 20px;
-    line-height: 140px;
+/* Homepage */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 80px 20px;
 }
 
-/* Work Page */
+.portfolio-title {
+    font-size: 10vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Work Page - Grid Layout */
 .work-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    padding: 140px 60px 60px;
 }
 
 .work-title {
-    font-size: 10vw;
+    font-size: 6vw;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
-.project-links {
+/* Grid layout for work */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.project-item {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
 }
 
-.project-links a {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-    transition: opacity 0.3s;
+.project-item img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.project-links a:hover {
-    opacity: 0.6;
+.project-item:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
-/* Work 2024 Page */
+/* Work 2024 Page (Old Version but Improved) */
 .work-2024-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    padding: 140px 60px 60px;
 }
 
 .work-2024-title {
-    font-size: 10vw;
+    font-size: 6vw;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .work-2024-links {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .work-2024-links a {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     text-decoration: none;
     color: black;
@@ -118,86 +153,111 @@ nav ul li a {
     opacity: 0.6;
 }
 
-/* Work Link at Bottom */
-.work-link {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-.work-link a {
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-    color: black;
-}
-
 /* About Page */
-.about-title {
-    font-size: 10vw;
-    font-weight: bold;
-    text-align: left;
-    margin: 50px;
-    line-height: 1;
-}
-
 .about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    text-align: center;
+    padding: 140px 40px 40px;
 }
 
-/* Full-Width Image */
+.about-title {
+    font-size: 6vw;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
 .about-image {
-    width: 50%;
+    width: 45%;
     height: auto;
-    display: block;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 700px;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Contact Page */
 .contact-container {
     display: flex;
     flex-direction: column;
-    position: relative;
-    width: 90%;
-    max-width: 1200px;
-    min-height: 100vh;
-    margin: 0 auto;
+    align-items: center;
+    padding: 140px 40px 40px;
+    text-align: center;
 }
 
-/* My Works Top Right */
-.my-works {
-    font-size: 2rem;
-    font-weight: bold;
-    position: absolute;
-    top: 20px;
-    right: 50px;
-}
-
-/* Contact Info (Left Side) */
-.contact-info {
-    position: absolute;
-    top: 40%;
-    left: 60px;
-    font-size: 18px;
-    color: gray;
-}
-
-/* Contact Image (Right Side, Large) */
-.contact-image {
-    width: 65%;
-    height: auto;
-    position: absolute;
-    top: 20%;
-    right: 50px;
-}
-
-/* Large Contact Title at Bottom */
 .contact-title {
-    font-size: 10vw;
+    font-size: 6vw;
     font-weight: bold;
-    position: absolute;
-    bottom: 20px;
-    left: 50px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.contact-image {
+    width: 55%;
+    max-width: 450px;
+    height: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .portfolio-title {
+        font-size: 12vw;
+    }
+
+    .work-container {
+        padding: 120px 40px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-title {
+        font-size: 14vw;
+    }
+
+    .work-container {
+        padding: 100px 30px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image, .contact-image {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-title {
+        font-size: 16vw;
+    }
+
+    .work-container {
+        padding: 100px 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
