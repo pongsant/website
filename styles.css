@@ -157,12 +157,12 @@ nav ul li a {
     color: gray;
 }
 
-/* Contact Image (Right Side, Larger) */
+/* Contact Image (Right Side, Even Larger) */
 .contact-image {
-    width: 50%;  /* Increased size */
+    width: 65%;  /* Increased to 65% */
     height: auto;
     position: absolute;
-    top: 25%; /* Adjusted for better alignment */
+    top: 20%; /* Adjusted for better alignment */
     right: 50px;
 }
 
