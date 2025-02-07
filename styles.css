@@ -95,7 +95,6 @@ main {
     padding: 140px 60px 60px;
 }
 
-/* Work Title */
 .work-title {
     font-size: 6vw;
     font-weight: bold;
@@ -190,30 +189,7 @@ main {
     opacity: 0.6;
 }
 
-/* Back Arrow Button */
-.home-button {
-    position: fixed;
-    bottom: 40px;
-    left: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: black;
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    border-radius: 50%;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.home-button:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-}
-
-/* About Page */
+/* About Page - Restored */
 .about-container {
     display: flex;
     flex-direction: column;
@@ -229,8 +205,9 @@ main {
 }
 
 .about-image {
-    width: 45%;
+    width: 50%;
     height: auto;
+    display: block;
     margin-bottom: 30px;
     border-radius: 10px;
 }
@@ -241,31 +218,130 @@ main {
     line-height: 1.6;
 }
 
-/* Contact Page */
+/* Contact Page - Redesigned */
 .contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 140px 40px 40px;
+    justify-content: center;
+    height: 100vh; /* Full screen height */
     text-align: center;
+    padding: 100px 40px;
 }
 
+/* Large Contact Title */
 .contact-title {
-    font-size: 6vw;
-    font-weight: bold;
-    margin-bottom: 40px;
+    font-size: 5vw;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
+/* Contact Info Box */
 .contact-info {
-    font-size: 16px;
-    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 50px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
 }
 
+/* Contact Info Text */
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+/* Contact Links (Email & Phone) */
 .contact-info a {
     text-decoration: none;
     color: black;
+    font-size: 18px;
     font-weight: bold;
+    transition: opacity 0.3s, transform 0.2s;
 }
+
+.contact-info a:hover {
+    opacity: 0.6;
+    transform: scale(1.05);
+}
+
+/* Social Icons */
+.contact-social {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-social a {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.contact-social a:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+
+/* Contact Image */
+.contact-image {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .contact-info {
+        padding: 25px 40px;
+    }
+
+    .contact-info p, .contact-info a {
+        font-size: 16px;
+    }
+
+    .contact-title {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        max-width: 90%;
+    }
+
+    .contact-image {
+        width: 70%;
+    }
+
+    .contact-title {
+        font-size: 8vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 10vw;
+    }
+
+    .contact-info {
+        padding: 20px 30px;
+    }
+
+    .contact-info p, .contact-info a {
+        font-size: 14px;
+    }
+}
+
 
 /* Animated Wave Background */
 @keyframes waveBackground {
@@ -294,11 +370,38 @@ main {
     z-index: -1;
 }
 
+/* Back Arrow Button */
+.home-button {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
     .project-grid {
         flex-direction: column;
         width: 90%;
+    }
+
+    .about-image {
+        width: 70%;
     }
 }
 
@@ -306,5 +409,15 @@ main {
     .work-button {
         font-size: 16px;
         padding: 12px 25px;
+    }
+
+    .about-title {
+        font-size: 8vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 10vw;
     }
 }
