@@ -353,14 +353,14 @@ main {
     width: 100%;
     height: 100%;
     background: linear-gradient(-45deg, 
-        #FF6F61,  
+        #8e8584,  
         #F7CAC9,  
         #92A8D1,  
-        #88B04B,  
-        #5F4B8B 
+        #fcfcfc,  
+        hsl(259, 18%, 68%) 
     );
     background-size: 400% 400%;
-    animation: waveBackground 12s ease-in-out infinite;
+    animation: waveBackground 15s ease-in-out infinite;
     z-index: -1;
 }
 
