@@ -387,31 +387,3 @@ main {
     opacity: 0.8;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .project-grid {
-        flex-direction: column;
-        width: 90%;
-    }
-
-    .about-image {
-        width: 70%;
-    }
-}
-
-@media (max-width: 768px) {
-    .work-button {
-        font-size: 16px;
-        padding: 12px 25px;
-    }
-
-    .about-title {
-        font-size: 8vw;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-title {
-        font-size: 10vw;
-    }
-}
