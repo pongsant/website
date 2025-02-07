@@ -270,12 +270,6 @@ main {
     transform: scale(1.05);
 }
 
-/* Social Icons */
-.contact-social {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-}
 
 .contact-social a {
     text-decoration: none;
