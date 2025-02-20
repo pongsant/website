@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sketch</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -10,45 +11,23 @@
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
   </head>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<a href="final_typo.html" class="home-button">←</a>
 
   <body>
-    <header>
-      <nav>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="Contact.html">Contact</a></li>
-          </ul>
-      </nav>
-    </header>
-    
-    <!-- Updated Home Button with Dropdown -->
-    <a href="#" class="home-button" onclick="toggleDropdown()">←</a>
-    <div id="dropdown-menu" style="display: none; position: absolute; background: white; border: 1px solid #ccc; padding: 10px;">
-        <ul style="list-style-type: none; padding: 0;">
-            <li><a href="typography.html">Typography</a></li>
-            <li><a href="final_typo.html">Final Typo</a></li>
-        </ul>
-    </div>
-
-    <script>
-        function toggleDropdown() {
-            const dropdown = document.getElementById('dropdown-menu');
-            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
-        }
-        
-        // Close dropdown when clicking outside
-        window.onclick = function(event) {
-            if (!event.target.matches('.home-button')) {
-                const dropdown = document.getElementById('dropdown-menu');
-                if (dropdown.style.display === 'block') {
-                    dropdown.style.display = 'none';
-                }
-            }
-        }
-    </script>
-
     <script src="FUTURE2.js"></script>
-    <div class="animated-background"></div>
   </body>
+</div>
+
+    
+<script src="FUTURE2.js"></script>
+<div class="animated-background"></div>
 </html>
