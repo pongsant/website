@@ -18,16 +18,16 @@ function setup() {
 }
 
 function draw() {
-  background(0, 50); // Fading effect
+  background(0, 50); 
   
-  fill(0, 255, 0); // Matrix Green
+  fill(0, 255, 0); 
   for (let i = 0; i < drops.length; i++) {
     text(txt[i], drops[i].x, drops[i].y);
     
-    drops[i].y += random(3, 7); // Speed of falling
+    drops[i].y += random(3, 7); 
 
     if (drops[i].y > height) {
-      drops[i].y = random(-300, 0); // Reset drop
+      drops[i].y = random(-300, 0); 
     }
   }
 }
