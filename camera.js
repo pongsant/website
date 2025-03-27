@@ -39,15 +39,18 @@ function draw() {
 }
 
 function mousePressed() {
-  let finalImage = createGraphics(width, height);
-  finalImage.image(faceGraphics, 0, 0, width, height);
+  // Only save image if the mouse is inside the canvas area
+  if (mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height) {
+    let finalImage = createGraphics(width, height);
+    finalImage.image(faceGraphics, 0, 0, width, height);
 
-  finalImage.loadPixels();
-  for (let i = 0; i < finalImage.pixels.length; i += 4) {
-    finalImage.pixels[i] = finalImage.pixels[i] * 1.05;
-    finalImage.pixels[i + 1] = finalImage.pixels[i + 1] * 0.95;
+    finalImage.loadPixels();
+    for (let i = 0; i < finalImage.pixels.length; i += 4) {
+      finalImage.pixels[i] = finalImage.pixels[i] * 1.05;
+      finalImage.pixels[i + 1] = finalImage.pixels[i + 1] * 0.95;
+    }
+    finalImage.updatePixels();
+
+    save(finalImage, 'webcam_art.png');
   }
-  finalImage.updatePixels();
-
-  save(finalImage, 'webcam_art.png');
 }
