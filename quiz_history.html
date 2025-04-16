@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mood History</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
@@ -11,6 +11,26 @@
     <ul id="historyList"></ul>
     <button onclick="clearHistory()" class="button">Clear History</button>
   </div>
+  <script>
+    window.onload = function () {
+      const list = document.getElementById("historyList");
+      const history = JSON.parse(localStorage.getItem("moodHistory")) || [];
+      if (history.length === 0) {
+        list.innerHTML = "<li>No mood history yet.</li>";
+        return;
+      }
+      history.forEach((entry, index) => {
+        const li = document.createElement("li");
+        li.innerText = `Mood #${index + 1} on ${entry.time}: Q1 - ${entry.q1}, Q3 - ${entry.q3}`;
+        list.appendChild(li);
+      });
+    };
+    function clearHistory() {
+      localStorage.removeItem("moodHistory");
+      location.reload();
+    }
+  </script>
   <script src="history.js"></script>
+
 </body>
 </html>

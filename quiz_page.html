@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mood Quiz</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
@@ -16,7 +16,6 @@
           <option value="excited">Excited</option>
         </select>
       </div>
-
       <div class="question">
         <label>2. Do you want lyrics or just sounds?</label>
         <select name="q2">
@@ -24,7 +23,6 @@
           <option value="instrumental">Instrumental</option>
         </select>
       </div>
-
       <div class="question">
         <label>3. Do you feel sad or happy?</label>
         <select name="q3">
@@ -32,7 +30,6 @@
           <option value="happy">Happy</option>
         </select>
       </div>
-
       <div class="question">
         <label>4. Do you want fast or slow music?</label>
         <select name="q4">
@@ -40,7 +37,6 @@
           <option value="fast">Fast</option>
         </select>
       </div>
-
       <div class="question">
         <label>5. Do you like acoustic or electronic sound?</label>
         <select name="q5">
@@ -48,7 +44,6 @@
           <option value="electronic">Electronic</option>
         </select>
       </div>
-
       <div class="question">
         <label>6. Are you feeling anxious or peaceful?</label>
         <select name="q6">
@@ -56,7 +51,6 @@
           <option value="peaceful">Peaceful</option>
         </select>
       </div>
-
       <div class="question">
         <label>7. Do you prefer old songs or new songs?</label>
         <select name="q7">
@@ -64,7 +58,6 @@
           <option value="new">New</option>
         </select>
       </div>
-
       <div class="question">
         <label>8. Do you want to feel more emotional or uplifted?</label>
         <select name="q8">
@@ -72,10 +65,26 @@
           <option value="uplifted">Uplifted</option>
         </select>
       </div>
-
       <button type="submit" class="button">See Result</button>
     </form>
   </div>
+  <script>
+    const form = document.getElementById("quizForm");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const answers = {};
+      const formData = new FormData(form);
+      for (let [key, value] of formData.entries()) {
+        answers[key] = value;
+      }
+      localStorage.setItem("moodAnswers", JSON.stringify(answers));
+      let history = JSON.parse(localStorage.getItem("moodHistory")) || [];
+      history.push({ ...answers, time: new Date().toLocaleString() });
+      localStorage.setItem("moodHistory", JSON.stringify(history));
+      window.location.href = "quiz_result.html";
+    });
+  </script>
   <script src="quiz.js"></script>
+
 </body>
 </html>
