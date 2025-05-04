@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Past Life Divination</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Life Tarot</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="container">
     <h1>🔮 Past Life Divination</h1>
-    <p>Enter your name or birthday to reveal your symbolic past:</p>
-    <input type="text" id="userInput" placeholder="e.g. 06/27/2003" />
+    <p>Enter your name or birthday:</p>
+    <input type="text" id="userInput" placeholder="e.g. 06/27/2003 or Alice" />
+    <br />
     <button id="revealBtn">Reveal</button>
-    <div id="result"></div>
+    <div id="result" class="tarot-card"></div>
   </div>
+
   <script src="past-life-taro.js"></script>
 </body>
 </html>
